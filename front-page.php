@@ -1,5 +1,6 @@
 <?php
 get_header();
+?>
 
 <!-- Your front-page content here -->
 
