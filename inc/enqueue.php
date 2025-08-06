@@ -9,7 +9,7 @@ function leeside_enqueue_assets() {
     'leeside-style',
     get_template_directory_uri() . '/assets/css/style.css',
     [],
-    filemtime(get_template_directory() . '/assets/css/style.css') // Cache
+    filemtime(get_template_directory() . '/assets/css/style.css')
   );
 
   // JavaScript - loaded in footer

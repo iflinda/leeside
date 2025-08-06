@@ -1,3 +1,33 @@
 @import 'layout.css';
 @import 'header.css';
 @import 'responsive.css';
+
+body {
+  background-color: #1A181D;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+  color: #57C0E6;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  color: #FFFFFF;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
