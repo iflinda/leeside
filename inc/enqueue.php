@@ -12,7 +12,7 @@ function leeside_enqueue_assets() {
     filemtime(get_template_directory() . '/assets/css/style.css')
   );
 
-  // JavaScript - loaded in footer
+  // Load JavaScript
   wp_enqueue_script(
     'leeside-script',
     get_template_directory_uri() . '/assets/js/main.js',
@@ -21,20 +21,12 @@ function leeside_enqueue_assets() {
     true // Load in footer
   );
 
-  // Example: Load Google Fonts (optional)
+  // Load Google Fonts
   wp_enqueue_style(
     'leeside-fonts',
     'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap',
     [],
     null
-  );
-
-  // Example: Font Awesome (optional)
-  wp_enqueue_style(
-    'fontawesome',
-    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
-    [],
-    '6.4.0'
   );
 }
 add_action('wp_enqueue_scripts', 'leeside_enqueue_assets');
