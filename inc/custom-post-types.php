@@ -1,6 +1,5 @@
 <?php
-function mytheme_register_custom_post_types() {
-  // Example: Project post type
+function leeside_register_custom_post_types() {
   register_post_type('project', [
     'labels' => [
       'name' => __('Projects'),
@@ -14,4 +13,4 @@ function mytheme_register_custom_post_types() {
     'show_in_rest' => true
   ]);
 }
-add_action('init', 'mytheme_register_custom_post_types');
+add_action('init', 'leeside_register_custom_post_types');

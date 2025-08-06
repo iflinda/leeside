@@ -1,5 +1,5 @@
 <?php
-function mytheme_setup() {
+function leeside_setup() {
   // Add featured image support
   add_theme_support('post-thumbnails');
 
@@ -14,8 +14,8 @@ function mytheme_setup() {
 
   // Register navigation menu
   register_nav_menus([
-    'primary' => __('Primary Menu', 'mytheme'),
-    'footer'  => __('Footer Menu', 'mytheme')
+    'primary' => __('Primary Menu', 'leeside'),
+    'footer'  => __('Footer Menu', 'leeside')
   ]);
 }
-add_action('after_setup_theme', 'mytheme_setup');
+add_action('after_setup_theme', 'leeside_setup');
