@@ -1,33 +1,52 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Hide scrollbars for Firefox */
+  * {
+    scrollbar-width: none;
+  }
+
+  /* Hide scrollbars for WebKit browsers */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
     background-color: #1A181D;
     font-family: 'Inter', sans-serif;
   }
-  
+
   h1, h2, h3 {
     color: #57C0E6;
     font-weight: 700;
   }
-  
+
   h1 {
     font-size: 32px;
+    padding: 15px 0;
   }
-  
+
   h2 {
     font-size: 24px;
+    padding: 15px 0;
   }
-  
+
   p {
     color: #FFFFFF;
+    padding: 10px 0;
   }
-  
+
   li {
     list-style: none;
   }
-  
+
   a {
     text-decoration: none;
   }
+}
