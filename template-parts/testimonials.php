@@ -1,6 +1,6 @@
 <?php
 $args = [
-  'post_type' => 'testimonial', // Your custom post type slug
+  'post_type' => 'testimonials', // Your custom post type slug
   'posts_per_page' => -1,        // Show all testimonials
   'orderby' => 'date',           // Order by date (newest first)
   'order' => 'DESC',
