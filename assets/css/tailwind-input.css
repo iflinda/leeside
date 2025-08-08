@@ -63,11 +63,23 @@
 
   /* Buttons */
   .btn {
-    @apply inline-block border-2 bg-brandBlue border-brandBlue text-black font-bold py-3 px-6 rounded-lg;
-    margin: 2rem 0;
+    @apply
+      inline-block
+      bg-brandBlue
+      text-black
+      font-bold
+      py-3
+      px-6
+      rounded-lg
+      transition-colors
+      duration-300
+      hover:bg-brandBlue-dark
+      hover:text-white;
   }
 
   .btn:hover {
-    @apply border-white text-white;
+    @apply
+      border-white
+      text-white;
   }
 }
