@@ -1,59 +1,68 @@
 @import "tailwindcss";
 
 @layer base {
+  /* Box sizing reset */
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
 
-  /* Hide scrollbars for Firefox */
+  /* Scrollbar hidden */
+  /* Firefox */
   * {
     scrollbar-width: none;
   }
 
-  /* Hide scrollbars for WebKit browsers */
+  /* WebKit browsers */
   ::-webkit-scrollbar {
     display: none;
   }
 
+  /* Body base styles */
   body {
     background-color: #1A181D;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
+  /* Headings */
   h1, h2, h3 {
     color: #57C0E6;
     font-weight: 700;
+    padding-bottom: 2rem;
   }
 
   h1 {
-    font-size: 32px;
-    padding: 15px 0;
+    font-size: 2rem; /* 32px */
   }
 
   h2 {
-    font-size: 24px;
-    padding: 15px 0;
+    font-size: 1.5rem; /* 24px */
   }
 
+  /* Paragraph */
   p {
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
     color: #FFFFFF;
-    padding: 10px 0;
+    padding: 0.8rem 0;
   }
 
+  /* Lists */
   li {
     list-style: none;
   }
 
+  /* Links */
   a {
     text-decoration: none;
   }
 
+  /* Buttons */
   .btn {
+    display: inline-block;
     background-color: #57C0E6;
     color: #000000;
+    margin: 2rem 0;
     padding: 1rem;
     font-weight: bold;
     border-radius: 10px;

@@ -1,7 +1,7 @@
-<header class="min-h-screen pt-[30vh]">
+<header class="min-h-screen mt-[30vh]">
   <div class="min-h-screen grid grid-cols-2">
     <div class="col-span-1 pl-40 max-w-full">
-      <div class="prose max-w-none">
+      <div class="content max-w-none">
         <?php
           $front_page_id = (int) get_option('page_on_front');
           if ($front_page_id) {
