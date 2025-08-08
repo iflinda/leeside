@@ -38,6 +38,7 @@
   }
 
   p {
+    font-size: 18px;
     color: #FFFFFF;
     padding: 10px 0;
   }
@@ -48,5 +49,13 @@
 
   a {
     text-decoration: none;
+  }
+
+  .btn {
+    background-color: #57C0E6;
+    color: #000000;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
   }
 }
