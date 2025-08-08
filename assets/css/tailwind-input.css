@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brandBlue: #57C0E6;
+}
+
 @layer base {
   /* Box sizing reset */
   *,
@@ -59,12 +63,11 @@
 
   /* Buttons */
   .btn {
-    display: inline-block;
-    background-color: #57C0E6;
-    color: #000000;
+    @apply inline-block border-2 bg-brandBlue border-brandBlue text-black font-bold py-3 px-6 rounded-lg;
     margin: 2rem 0;
-    padding: 1rem;
-    font-weight: bold;
-    border-radius: 10px;
+  }
+
+  .btn:hover {
+    @apply border-white text-white;
   }
 }
