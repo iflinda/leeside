@@ -166,9 +166,6 @@
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
-  .mt-\[30vh\] {
-    margin-top: 30vh;
-  }
   .grid {
     display: grid;
   }
@@ -183,6 +180,9 @@
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pt-\[25vh\] {
+    padding-top: 25vh;
   }
   .pl-40 {
     padding-left: calc(var(--spacing) * 40);
@@ -225,10 +225,11 @@
     text-decoration: none;
   }
   .btn {
+    margin-block: calc(var(--spacing) * 8);
     display: inline-block;
     border-radius: var(--radius-lg);
     border-style: var(--tw-border-style);
-    border-width: 2px;
+    border-width: 4px;
     border-color: var(--color-brandBlue);
     background-color: var(--color-brandBlue);
     padding-inline: calc(var(--spacing) * 6);
@@ -236,11 +237,16 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-black);
-    margin: 2rem 0;
-  }
-  .btn:hover {
-    border-color: var(--color-white);
-    color: var(--color-white);
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-white);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
   }
 }
 @property --tw-border-style {

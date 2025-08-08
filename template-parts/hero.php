@@ -1,5 +1,5 @@
-<header class="min-h-screen mt-[30vh]">
-  <div class="min-h-screen grid grid-cols-2">
+<header class="min-h-screen pt-[25vh]">
+  <div class="grid grid-cols-2">
     <div class="col-span-1 pl-40 max-w-full">
       <div class="content max-w-none">
         <?php

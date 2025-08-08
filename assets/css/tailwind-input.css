@@ -65,21 +65,19 @@
   .btn {
     @apply
       inline-block
+      border-4
+      rounded-lg
+      
       bg-brandBlue
+      border-brandBlue
       text-black
       font-bold
-      py-3
-      px-6
-      rounded-lg
-      transition-colors
-      duration-300
-      hover:bg-brandBlue-dark
+      
+      my-8       /* margin vertical */
+      py-3       /* padding vertical */
+      px-6       /* padding horizontal */
+      
+      hover:border-white
       hover:text-white;
-  }
-
-  .btn:hover {
-    @apply
-      border-white
-      text-white;
   }
 }
