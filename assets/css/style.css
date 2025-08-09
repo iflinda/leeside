@@ -10,10 +10,18 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-display: "Inter", system-ui, sans-serif;
+    --color-backgroundBlack: #1A181D;
     --color-brandBlue: #57C0E6;
   }
 }
@@ -189,40 +197,37 @@
   }
 }
 @layer base {
-  *, *::before, *::after {
+  * {
     box-sizing: border-box;
   }
-  * {
-    scrollbar-width: none;
-  }
-  ::-webkit-scrollbar {
-    display: none;
-  }
   body {
-    background-color: #1A181D;
-    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--color-backgroundBlack);
+    font-family: var(--font-display);
   }
   h1, h2, h3 {
-    color: #57C0E6;
-    font-weight: 700;
     padding-bottom: 2rem;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-brandBlue);
   }
   h1 {
     font-size: 2rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   p {
-    font-size: 1.125rem;
-    color: #FFFFFF;
-    padding: 0.8rem 0;
+    padding-bottom: 0.8rem;
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    color: var(--color-white);
   }
   li {
-    list-style: none;
+    list-style-type: none;
   }
   a {
-    text-decoration: none;
+    text-decoration-line: none;
   }
   .btn {
     margin-block: calc(var(--spacing) * 8);
@@ -237,6 +242,11 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-black);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
     &:hover {
       @media (hover: hover) {
         border-color: var(--color-white);
@@ -249,20 +259,25 @@
     }
   }
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
-@property --tw-font-weight {
+@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-border-style: solid;
+      --tw-duration: initial;
     }
   }
 }
