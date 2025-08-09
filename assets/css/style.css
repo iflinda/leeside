@@ -189,14 +189,26 @@
   .grid-cols-\[50\%_50\%\] {
     grid-template-columns: 50% 50%;
   }
+  .bg-\[http\:\/\/leeside\.local\/wp-content\/themes\/leeside\/assets\/images\/bg-flow\.svg\] {
+    background-color: //leeside.local/wp-content/themes/leeside/assets/images/bg-flow.svg;
+  }
+  .bg-\[url\(http\:\/\/leeside\.local\/wp-content\/themes\/leeside\/assets\/images\/bg-flow\.svg\)\] {
+    background-image: url(http://leeside.local/wp-content/themes/leeside/assets/images/bg-flow.svg);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
   .pt-\[25vh\] {
     padding-top: 25vh;
   }
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
-  }
-  .pl-40 {
-    padding-left: calc(var(--spacing) * 40);
   }
   .md\:pl-40 {
     @media (width >= 48rem) {
