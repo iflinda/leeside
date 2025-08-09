@@ -4,6 +4,7 @@
     "fresh": "^0.5.2"
   },
   "devDependencies": {
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "tailwindcss-animated": "^2.0.0"
   }
 }
