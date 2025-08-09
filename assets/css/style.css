@@ -16,11 +16,13 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
-    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --animate-pulse: pulse var(--default-animation-duration, 2s) var(--default-animation-timing-function, cubic-bezier(0.4, 0, 0.6, 1)) var(--default-animation-delay, 0s) infinite;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --animate-fade: fade var(--default-animation-duration, 1s) var(--default-animation-timing-function, ease) var(--default-animation-delay, 0s) both;
+    --animate-fade-up: fade-up var(--default-animation-duration, 1s) var(--default-animation-timing-function, ease) var(--default-animation-delay, 0s) both;
     --font-display: "Inter", system-ui, sans-serif;
     --color-backgroundBlack: #1A181D;
     --color-brandBlue: #57C0E6;
@@ -187,6 +189,12 @@
   .max-w-none {
     max-width: none;
   }
+  .animate-fade {
+    animation: var(--animate-fade);
+  }
+  .animate-fade-up {
+    animation: var(--animate-fade-up);
+  }
   .grid-cols-\[50\%_50\%\] {
     grid-template-columns: 50% 50%;
   }
@@ -204,6 +212,12 @@
   }
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
+  }
+  .animate-duration-\[3000ms\] {
+    animation-duration: 3000ms;
+  }
+  .animate-duration-\[5000ms\] {
+    animation-duration: 5000ms;
   }
   .sm\:bg-\[url\(\'\/wp-content\/themes\/leeside\/assets\/images\/bg-flow\.svg\'\)\] {
     @media (width >= 40rem) {
@@ -300,6 +314,24 @@
 @keyframes pulse {
   50% {
     opacity: 0.5;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 @layer properties {
