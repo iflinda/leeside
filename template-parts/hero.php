@@ -1,7 +1,7 @@
 <header class="min-h-screen pt-[25vh]">
-  <div class="grid grid-cols-2">
-    <div class="col-span-1 pl-40 max-w-full">
-      <div class="content max-w-none">
+  <div class="grid grid-cols-[50%_50%]">
+    <div class="col-span-1 pl-10 md:pl-40 max-w-[60vw]">
+      <div class="prose max-w-none">
         <?php
           $front_page_id = (int) get_option('page_on_front');
           if ($front_page_id) {
@@ -15,6 +15,5 @@
         ?>
       </div>
     </div>
-    <div class="col-span-1"></div>
   </div>
 </header>

@@ -41,7 +41,7 @@
     @apply 
       text-lg 
       text-white 
-      pb-[0.8rem];
+      pb-4;
   }
 
   /* Lists */
