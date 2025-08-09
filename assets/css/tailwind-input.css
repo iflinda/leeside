@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
 
+@import "./nav.css";
+
 @theme {
   --font-display: "Inter", system-ui, sans-serif;
 
@@ -9,7 +11,7 @@
 }
 
 @layer base {
-  /* Box sizing reset */
+  * Box sizing reset */
   * {
     @apply box-border;
   }

@@ -177,17 +177,29 @@
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
+  .flex {
+    display: flex;
+  }
   .grid {
     display: grid;
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-auto {
+    width: auto;
   }
   .max-w-\[60vw\] {
     max-width: 60vw;
   }
   .max-w-none {
     max-width: none;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .animate-fade {
     animation: var(--animate-fade);
@@ -198,6 +210,19 @@
   .grid-cols-\[50\%_50\%\] {
     grid-template-columns: 50% 50%;
   }
+  .items-end {
+    align-items: flex-end;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .space-x-8 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 8) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
   .bg-\[url\(\'\/wp-content\/themes\/leeside\/assets\/images\/bg-mobile-flow\.svg\'\)\] {
     background-image: url('/wp-content/themes/leeside/assets/images/bg-mobile-flow.svg');
   }
@@ -206,6 +231,9 @@
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
   }
   .pt-\[25vh\] {
     padding-top: 25vh;
@@ -216,8 +244,12 @@
   .animate-duration-\[3000ms\] {
     animation-duration: 3000ms;
   }
-  .animate-duration-\[5000ms\] {
-    animation-duration: 5000ms;
+  .hover\:text-brandBlue {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-brandBlue);
+      }
+    }
   }
   .sm\:bg-\[url\(\'\/wp-content\/themes\/leeside\/assets\/images\/bg-flow\.svg\'\)\] {
     @media (width >= 40rem) {
@@ -230,8 +262,18 @@
     }
   }
 }
+nav {
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brandBlue);
+}
+nav a:hover {
+  color: var(--color-white);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+}
 @layer base {
-  * {
+  * Box sizing reset */ * {
     box-sizing: border-box;
   }
   body {
@@ -298,6 +340,31 @@
     }
   }
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -337,6 +404,12 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-space-x-reverse: 0;
       --tw-font-weight: initial;
       --tw-border-style: solid;
       --tw-duration: initial;

@@ -1,0 +1,12 @@
+nav {
+    @apply
+       text-brandBlue
+       font-bold
+}
+
+nav a:hover {
+    @apply 
+        text-white
+        underline
+        underline-offset-4
+  }
